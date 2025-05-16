@@ -5,6 +5,7 @@ block content
   ul
     each student, i in students
       li
-        span #{student.name} — #{student.birthFormatted}
+        p #{student.name} - #{student.birthFormatted}
+        a(href=`/edit/${i}`) Modifier
         form(action=`/delete/${i}` method="POST" style="display:inline")
-          button Supprimer
+          button(type="submit") Supprimer

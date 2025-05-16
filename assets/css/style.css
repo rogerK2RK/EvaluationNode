@@ -82,3 +82,10 @@ footer {
 footer p {
     margin: 0 15px;
 }
+
+div {
+    position: fixed;
+    bottom: 30%;
+    right: 45%;
+    background-color: rgb(215, 250, 225);
+}

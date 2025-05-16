@@ -9,8 +9,19 @@ html(lang="fr")
       nav
         a(href="/") Accueil
         a(href="/users") Liste des étudiants
+
+    if toast
+      .toast= toast
+
     main
       block content
+
+    script.
+      const toast = document.querySelector('.toast');
+      if (toast) {
+        setTimeout(() => toast.remove(), 5000);
+      }
+
     footer 
         p © 2024 Mon Application
         p |

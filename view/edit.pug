@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  h1 Modifier un étudiant
+
+  form(action=`/edit/${id}` method="POST")
+    label Nom :
+    input(type="text", name="name", required, value=student.name)
+    br
+    label Date de naissance :
+    input(type="date", name="birth", required, value=student.birth)
+    br
+    button Enregistrer
