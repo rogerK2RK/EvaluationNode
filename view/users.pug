@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  h1 Liste des étudiants
+  ul
+    each student, i in students
+      li
+        span #{student.name} — #{student.birthFormatted}
+        form(action=`/delete/${i}` method="POST" style="display:inline")
+          button Supprimer

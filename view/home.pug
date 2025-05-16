@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h1 Ajouter un étudiant
+  form(action="/add" method="POST")
+    label Nom :
+    input(type="text", name="name", required)
+    br
+    label Date de naissance :
+    input(type="date", name="birth", required)
+    br
+    button Ajouter
